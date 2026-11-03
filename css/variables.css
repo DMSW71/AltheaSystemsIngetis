@@ -1,0 +1,37 @@
+/* Contrastes minimums : texte 11,74:1, liens 9,04:1, boutons 10,75:1, accent 5,89:1. */
+:root {
+  color-scheme: light dark;
+  --fond: #f4f7f5;
+  --surface: #ffffff;
+  --texte: #263633;
+  --primaire: #123b3a;
+  --accent: #9b462c;
+  --alerte: #a43c32;
+  --bordure: #dce5e0;
+  --espace: 1rem;
+  --petit-espace: 0.5rem;
+  --rayon: 0.75rem;
+  --largeur-page: 70rem;
+  --cible: 44px;
+  --texte-image: #ffffff;
+}
+
+@media (min-width: 48rem) {
+  :root { --espace: 1.25rem; }
+}
+
+@media (min-width: 64rem) {
+  :root { --espace: 1.5rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #171b1a;
+    --surface: #242a28;
+    --texte: #f1f3f2;
+    --primaire: #a6d5ca;
+    --accent: #f0a27a;
+    --alerte: #ff9288;
+    --bordure: #4b5652;
+  }
+}

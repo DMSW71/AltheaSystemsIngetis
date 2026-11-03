@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Créer un compte Althéa Systems.">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js" defer>
+    </script>
+    <title>
+      Créer un compte - Althéa Systems
+    </title>
+  </head>
+  <body>
+    <a class="evitement" href="#contenu">
+      Aller au contenu
+    </a>
+    <header class="entete">
+      <a class="logo" href="index.html">
+        <img src="img/logo.svg" alt="Althéa Systems, accueil" width="180" height="48">
+      </a>
+      <a class="panier" href="panier.html">
+        Panier
+        <span class="visuellement-cache">(0 article)</span>
+      </a>
+      <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal">
+        Menu
+      </button>
+      <form class="recherche" role="search" action="recherche.html" method="get">
+        <label for="q">
+          Rechercher un produit
+        </label>
+        <input id="q" name="titre" type="search">
+        <button type="submit">
+          Rechercher
+        </button>
+      </form>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal">
+        <ul class="liste-reset">
+          <li>
+            <a href="index.html">
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="catalogue.html">
+              Catalogue
+            </a>
+          </li>
+          <li>
+            <a href="categorie.html">
+              Diagnostic
+            </a>
+          </li>
+          <li>
+            <a href="index.html#contact">
+              Contact
+            </a>
+          </li>
+          <li>
+            <a href="index.html#presentation">
+              À propos d’Althéa Systems
+            </a>
+          </li>
+          <li>
+            <a href="connexion.html">
+              Se connecter
+            </a>
+          </li>
+          <li>
+            <a href="inscription.html">
+              S’inscrire
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="langues" aria-label="Choix de la langue">
+        <a href="?lang=fr" lang="fr" hreflang="fr" aria-current="true">
+          Français
+        </a>
+        <a href="?lang=en" lang="en" hreflang="en">
+          English
+        </a>
+        <a href="?lang=ar" lang="ar" hreflang="ar" dir="rtl">
+          العربية
+        </a>
+      </nav>
+    </header>
+    <main id="contenu" class="page">
+      <h1>
+        Créer un compte
+      </h1>
+      <form class="formulaire" action="inscription.html" method="post">
+        <p>
+          <label for="prenom">
+            Prénom (obligatoire)
+          </label>
+          <input id="prenom" name="prenom" type="text" autocomplete="given-name" maxlength="50" required>
+          <span class="erreur">
+            Saisissez votre prénom.
+          </span>
+        </p>
+        <p>
+          <label for="nom">
+            Nom (obligatoire)
+          </label>
+          <input id="nom" name="nom" type="text" autocomplete="family-name" maxlength="50" required>
+          <span class="erreur">
+            Saisissez votre nom.
+          </span>
+        </p>
+        <p>
+          <label for="courriel">
+            Adresse e-mail (obligatoire)
+          </label>
+          <input id="courriel" name="courriel" type="email" autocomplete="email" maxlength="254" required>
+          <span class="erreur">
+            Saisissez une adresse e-mail valide.
+          </span>
+        </p>
+        <p>
+          <label for="nouveau-mdp">
+            Mot de passe (obligatoire)
+          </label>
+          <input id="nouveau-mdp" name="motdepasse" type="password" autocomplete="new-password" minlength="12" aria-describedby="aide-mdp" required>
+          <span class="aide" id="aide-mdp">
+            12 caractères au minimum. Un mot de passe long est plus solide.
+          </span>
+          <span class="erreur">
+            Le mot de passe doit contenir au moins 12 caractères.
+          </span>
+        </p>
+        <p>
+          <label for="confirmation">
+            Confirmer le mot de passe (obligatoire)
+          </label>
+          <input id="confirmation" name="confirmation" type="password" autocomplete="new-password" minlength="12" required>
+          <span class="erreur">
+            Confirmez votre mot de passe.
+          </span>
+        </p>
+        <p>
+          <input id="cgu-accepte" name="cgu" type="checkbox" required>
+          <label for="cgu-accepte">
+            J’accepte les
+            <a href="index.html#cgu">
+              CGU
+            </a>
+            (obligatoire)
+          </label>
+        </p>
+        <button class="btn" type="submit">
+          Créer mon compte
+        </button>
+      </form>
+    </main>
+    <footer class="pied page">
+      <nav aria-label="Informations légales">
+        <ul class="liste-reset">
+          <li>
+            <a href="index.html#cgu">
+              CGU
+            </a>
+          </li>
+          <li>
+            <a href="index.html#mentions">
+              Mentions légales
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav id="contact" aria-label="Contact">
+        <ul class="liste-reset">
+          <li>
+            <a href="index.html#contact">
+              Nous contacter
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav aria-label="Réseaux sociaux">
+        <ul class="liste-reset">
+          <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              Instagram
+              <span class="visuellement-cache">
+                (nouvel onglet)
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p>
+        © 2026 Althéa Systems
+      </p>
+    </footer>
+  </body>
+</html>

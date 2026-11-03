@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Matériel de diagnostic et accessoires médicaux.">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js" defer>
+    </script>
+    <title>
+      Diagnostic - Althéa Systems
+    </title>
+  </head>
+  <body>
+    <a class="evitement" href="#contenu">
+      Aller au contenu
+    </a>
+    <header class="entete">
+      <a class="logo" href="index.html">
+        <img src="img/logo.svg" alt="Althéa Systems, accueil" width="180" height="48">
+      </a>
+      <a class="panier" href="panier.html">
+        Panier
+        <span class="visuellement-cache">(0 article)</span>
+      </a>
+      <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal">
+        Menu
+      </button>
+      <form class="recherche" role="search" action="recherche.html" method="get">
+        <label for="q">
+          Rechercher un produit
+        </label>
+        <input id="q" name="titre" type="search">
+        <button type="submit">
+          Rechercher
+        </button>
+      </form>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal">
+        <ul class="liste-reset">
+          <li>
+            <a href="index.html">
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="catalogue.html">
+              Catalogue
+            </a>
+          </li>
+          <li>
+            <a href="categorie.html" aria-current="page">
+              Diagnostic
+            </a>
+          </li>
+          <li>
+            <a href="index.html#contact">
+              Contact
+            </a>
+          </li>
+          <li>
+            <a href="index.html#presentation">
+              À propos d’Althéa Systems
+            </a>
+          </li>
+          <li>
+            <a href="connexion.html">
+              Se connecter
+            </a>
+          </li>
+          <li>
+            <a href="inscription.html">
+              S’inscrire
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="langues" aria-label="Choix de la langue">
+        <a href="?lang=fr" lang="fr" hreflang="fr" aria-current="true">
+          Français
+        </a>
+        <a href="?lang=en" lang="en" hreflang="en">
+          English
+        </a>
+        <a href="?lang=ar" lang="ar" hreflang="ar" dir="rtl">
+          العربية
+        </a>
+      </nav>
+    </header>
+    <main id="contenu" class="page">
+      <nav class="fil-ariane" aria-label="Fil d’Ariane">
+        <ol class="liste-reset">
+          <li>
+            <a href="index.html">
+              Accueil
+            </a>
+          </li>
+          <li aria-current="page">
+            Diagnostic
+          </li>
+        </ol>
+      </nav>
+      <section class="bandeau">
+        <img src="img/diagnostic.jpg" alt="" width="720" height="405">
+        <h1>
+          Diagnostic
+        </h1>
+      </section>
+      <p>
+        Appareils et accessoires de diagnostic.
+      </p>
+      <section>
+        <h2>
+          Les produits de la catégorie
+        </h2>
+        <ul class="produits liste-reset">
+          <li>
+            <article class="produit">
+              <img src="img/tensiometre.svg" alt="Illustration : Tensiomètre électronique de bras" width="400" height="300" loading="lazy">
+              <h3>
+                <a href="produit.html?produit=tensiometre">
+                  Tensiomètre électronique de bras
+                </a>
+              </h3>
+              <p class="prix">
+                59,90 € TTC
+              </p>
+              <p class="stock stock-rupture">
+                En rupture de stock
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="produit">
+              <img src="img/analyseur.svg" alt="Illustration : Analyseur hématologie 3-part" width="400" height="300" loading="lazy">
+              <h3>
+                <a href="produit.html?produit=analyseur">
+                  Analyseur hématologie 3-part
+                </a>
+              </h3>
+              <p class="prix">
+                4 990 € HT
+              </p>
+              <p class="stock">
+                En stock
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="produit">
+              <img src="img/microscope.svg" alt="Illustration : Microscope optique binoculaire" width="400" height="300" loading="lazy">
+              <h3>
+                <a href="produit.html?produit=microscope">
+                  Microscope optique binoculaire
+                </a>
+              </h3>
+              <p class="prix">
+                1 290 € HT
+              </p>
+              <p class="stock">
+                En stock
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="produit">
+              <img src="img/batterie-ecg.svg" alt="Illustration : Batterie ECG portable" width="400" height="300" loading="lazy">
+              <h3>
+                <a href="produit.html?produit=batterie-ecg">
+                  Batterie ECG portable
+                </a>
+              </h3>
+              <p class="prix">
+                89,90 €
+              </p>
+              <p class="stock">
+                En stock
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="produit">
+              <img src="img/batterie-moniteur.svg" alt="Illustration : Batterie moniteur compatible" width="400" height="300" loading="lazy">
+              <h3>
+                <a href="produit.html?produit=batterie-moniteur">
+                  Batterie moniteur compatible
+                </a>
+              </h3>
+              <p class="prix">
+                79,90 €
+              </p>
+              <p class="stock">
+                En stock
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="produit">
+              <img src="img/cable-ecg.svg" alt="Illustration : Câble ECG 10 fils universel" width="400" height="300" loading="lazy">
+              <h3>
+                <a href="produit.html?produit=cable-ecg">
+                  Câble ECG 10 fils universel
+                </a>
+              </h3>
+              <p class="prix">
+                49 € HT
+              </p>
+              <p class="stock stock-rupture">
+                En rupture de stock
+              </p>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <nav class="pagination" aria-label="Pagination">
+        <ul class="liste-reset">
+          <li>
+            <a href="categorie.html?page=1" aria-current="page">
+              <span class="visuellement-cache">
+                Page
+              </span>
+              1
+            </a>
+          </li>
+          <li>
+            <a href="categorie.html?page=2">
+              <span class="visuellement-cache">
+                Page
+              </span>
+              2
+            </a>
+          </li>
+          <li>
+            <a href="categorie.html?page=3">
+              <span class="visuellement-cache">
+                Page
+              </span>
+              3
+            </a>
+          </li>
+          <li>
+            <a href="categorie.html?page=2">
+              Suivant
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+    <footer class="pied page">
+      <nav aria-label="Informations légales">
+        <ul class="liste-reset">
+          <li>
+            <a href="index.html#cgu">
+              CGU
+            </a>
+          </li>
+          <li>
+            <a href="index.html#mentions">
+              Mentions légales
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav id="contact" aria-label="Contact">
+        <ul class="liste-reset">
+          <li>
+            <a href="index.html#contact">
+              Nous contacter
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav aria-label="Réseaux sociaux">
+        <ul class="liste-reset">
+          <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              Instagram
+              <span class="visuellement-cache">
+                (nouvel onglet)
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p>
+        © 2026 Althéa Systems
+      </p>
+      <span id="cgu" class="visuellement-cache">
+        CGU de la maquette.
+      </span>
+      <span id="mentions" class="visuellement-cache">
+        Mentions légales de la maquette.
+      </span>
+    </footer>
+  </body>
+</html>

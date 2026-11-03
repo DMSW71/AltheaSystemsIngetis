@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Accueil Althéa Systems : matériel médical, diagnostic, soins et laboratoire.">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js" defer>
+    </script>
+    <title>
+      Accueil - Althéa Systems
+    </title>
+  </head>
+  <body>
+    <a class="evitement" href="#contenu">
+      Aller au contenu
+    </a>
+    <header class="entete">
+      <a class="logo" href="index.html">
+        <img src="img/logo.svg" alt="Althéa Systems, accueil" width="180" height="48">
+      </a>
+      <a class="panier" href="panier.html">
+        Panier
+        <span class="visuellement-cache">(0 article)</span>
+      </a>
+      <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal">
+        Menu
+      </button>
+      <form class="recherche" role="search" action="recherche.html" method="get">
+        <label for="q">
+          Rechercher un produit
+        </label>
+        <input id="q" name="titre" type="search">
+        <button type="submit">
+          Rechercher
+        </button>
+      </form>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal">
+        <ul class="liste-reset">
+          <li>
+            <a href="index.html">
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="catalogue.html">
+              Catalogue
+            </a>
+          </li>
+          <li>
+            <a href="categorie.html">
+              Diagnostic
+            </a>
+          </li>
+          <li>
+            <a href="index.html#contact">
+              Contact
+            </a>
+          </li>
+          <li>
+            <a href="index.html#presentation">
+              À propos d’Althéa Systems
+            </a>
+          </li>
+          <li>
+            <a href="connexion.html">
+              Se connecter
+            </a>
+          </li>
+          <li>
+            <a href="inscription.html">
+              S’inscrire
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="langues" aria-label="Choix de la langue">
+        <a href="?lang=fr" lang="fr" hreflang="fr" aria-current="true">
+          Français
+        </a>
+        <a href="?lang=en" lang="en" hreflang="en">
+          English
+        </a>
+        <a href="?lang=ar" lang="ar" hreflang="ar" dir="rtl">
+          العربية
+        </a>
+      </nav>
+    </header>
+    <main id="contenu" class="page">
+      <h1>
+        Le matériel qui prend soin de votre pratique.
+      </h1>
+      <section class="carrousel" aria-label="À la une">
+        <ul class="defile liste-reset" tabindex="0" aria-label="Carrousel, à faire défiler">
+          <li id="une-1" class="slide">
+            <picture>
+              <source media="(max-width: 47.999rem)" srcset="img/diagnostic-carre.svg">
+              <img src="img/diagnostic.jpg" alt="Appareil de diagnostic médical" width="720" height="405" fetchpriority="high">
+            </picture>
+            <div class="slide-texte">
+              <p>
+                Du matériel pour le diagnostic.
+              </p>
+              <a href="categorie.html">
+                Voir le matériel de diagnostic
+              </a>
+            </div>
+          </li>
+          <li id="une-2" class="slide">
+            <img src="img/soins.jpg" alt="Matériel destiné aux soins" width="720" height="405" loading="lazy">
+            <div class="slide-texte">
+              <p>
+                Des produits pour les soins.
+              </p>
+              <a href="categorie.html">
+                Voir les produits
+              </a>
+            </div>
+          </li>
+          <li id="une-3" class="slide">
+            <img src="img/laboratoire.jpg" alt="Équipement médical de laboratoire" width="720" height="405" loading="lazy">
+            <div class="slide-texte">
+              <p>
+                Du matériel pour le laboratoire.
+              </p>
+              <a href="categorie.html">
+                Voir les produits
+              </a>
+            </div>
+          </li>
+        </ul>
+        <nav class="pastilles" aria-label="Choisir une diapositive">
+          <a href="#une-1">
+            <span class="visuellement-cache">
+              Diapositive 1
+            </span>
+          </a>
+          <a href="#une-2">
+            <span class="visuellement-cache">
+              Diapositive 2
+            </span>
+          </a>
+          <a href="#une-3">
+            <span class="visuellement-cache">
+              Diapositive 3
+            </span>
+          </a>
+        </nav>
+      </section>
+      <section id="presentation">
+        <h2>
+          Althéa Systems
+        </h2>
+        <p>
+          Althéa Systems vend du matériel médical aux professionnels de santé.
+          On y trouve des produits pour le diagnostic, les soins et le laboratoire.
+        </p>
+      </section>
+      <section class="categories">
+        <h2>
+          Nos catégories
+        </h2>
+        <ul class="liste-reset">
+          <li>
+            <a href="categorie.html">
+              <img src="img/categorie-diagnostic.svg" alt="" width="400" height="300">
+              Diagnostic
+            </a>
+          </li>
+          <li>
+            <a href="categorie.html">
+              <img src="img/categorie-soins.svg" alt="" width="400" height="300">
+              Soins
+            </a>
+          </li>
+          <li>
+            <a href="categorie.html">
+              <img src="img/categorie-mobilier.svg" alt="" width="400" height="300">
+              Mobilier
+            </a>
+          </li>
+          <li>
+            <a href="categorie.html">
+              <img src="img/categorie-consommables.svg" alt="" width="400" height="300">
+              Accessoires
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="top-produits">
+        <h2>
+          Top produits
+        </h2>
+        <ul class="produits liste-reset">
+          <li>
+            <article class="produit">
+              <img src="img/analyseur.svg" alt="Illustration : Analyseur hématologie 3-part" width="400" height="300" loading="lazy">
+              <h3>
+                <a href="produit.html?produit=analyseur">
+                  Analyseur hématologie 3-part
+                </a>
+              </h3>
+              <p class="prix">
+                4 990 € HT
+              </p>
+              <p class="stock">
+                En stock
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="produit">
+              <img src="img/microscope.svg" alt="Illustration : Microscope optique binoculaire" width="400" height="300" loading="lazy">
+              <h3>
+                <a href="produit.html?produit=microscope">
+                  Microscope optique binoculaire
+                </a>
+              </h3>
+              <p class="prix">
+                1 290 € HT
+              </p>
+              <p class="stock">
+                En stock
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="produit">
+              <img src="img/chariot.svg" alt="Illustration : Chariot de soins 3 niveaux" width="400" height="300" loading="lazy">
+              <h3>
+                <a href="produit.html?produit=chariot">
+                  Chariot de soins 3 niveaux
+                </a>
+              </h3>
+              <p class="prix">
+                590 € HT
+              </p>
+              <p class="stock">
+                En stock
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="produit">
+              <img src="img/cable-ecg.svg" alt="Illustration : Câble ECG 10 fils universel" width="400" height="300" loading="lazy">
+              <h3>
+                <a href="produit.html?produit=cable-ecg">
+                  Câble ECG 10 fils universel
+                </a>
+              </h3>
+              <p class="prix">
+                49 € HT
+              </p>
+              <p class="stock stock-rupture">
+                En rupture de stock
+              </p>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="pied page">
+      <nav aria-label="Informations légales">
+        <ul class="liste-reset">
+          <li>
+            <a href="index.html#cgu">
+              CGU
+            </a>
+          </li>
+          <li>
+            <a href="index.html#mentions">
+              Mentions légales
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav id="contact" aria-label="Contact">
+        <ul class="liste-reset">
+          <li>
+            <a href="index.html#contact">
+              Nous contacter
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav aria-label="Réseaux sociaux">
+        <ul class="liste-reset">
+          <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              Instagram
+              <span class="visuellement-cache">
+                (nouvel onglet)
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p>
+        © 2026 Althéa Systems
+      </p>
+      <span id="cgu" class="visuellement-cache">
+        CGU de la maquette.
+      </span>
+      <span id="mentions" class="visuellement-cache">
+        Mentions légales de la maquette.
+      </span>
+    </footer>
+  </body>
+</html>
