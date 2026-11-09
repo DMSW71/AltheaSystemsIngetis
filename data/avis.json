@@ -1,0 +1,26 @@
+[
+  {
+    "produit": "tensiometre",
+    "auteur": "Camille",
+    "note": 5,
+    "texte": "Facile à utiliser et l’écran est bien lisible."
+  },
+  {
+    "produit": "tensiometre",
+    "auteur": "Nicolas",
+    "note": 4,
+    "texte": "Le brassard est pratique pour une mesure à la maison."
+  },
+  {
+    "produit": "tensiometre",
+    "auteur": "<img src=x onerror=alert(1)>",
+    "note": 3,
+    "texte": "Texte de test : <script>alert(1)</script>"
+  },
+  {
+    "produit": "tensiometre",
+    "auteur": "Note invalide",
+    "note": 50,
+    "texte": "Cet avis doit être ignoré."
+  }
+]

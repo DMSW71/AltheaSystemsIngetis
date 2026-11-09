@@ -15,13 +15,15 @@
 |---:|---|---|
 | 1 | Titre | « Le matériel qui prend soin de votre pratique. » |
 | 2 | Carrousel | 3 images avec une phrase et un lien |
-| 3 | Présentation | 2 phrases pour présenter le site |
-| 4 | Catégories | 4 catégories avec une image |
-| 5 | Produits | 4 cartes avec le prix et le stock |
+| 3 | Catégories | 4 catégories avec une image |
+| 4 | Produits | 4 cartes avec le prix et le stock |
+| 5 | Présentation | 2 phrases pour présenter le site |
 
 ## Fiche produit (`produit.html`)
 
-Le fil d’Ariane, le nom du produit, 3 photos, le prix, le stock, la quantité, 4 caractéristiques et 6 produits similaires.
+Le fil d’Ariane, le nom du produit, les photos, le prix, le stock, la quantité, les caractéristiques, les avis et 6 produits similaires.
+
+À l’accueil, les catégories et les produits sont affichés avant la présentation d’Althéa Systems, placée en bas de page.
 
 ## Éléments repris sur plusieurs pages
 

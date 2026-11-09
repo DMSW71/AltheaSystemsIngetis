@@ -9,11 +9,10 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="main.js" defer>
-    </script>
     <title>
       Créer un compte - Althéa Systems
     </title>
+      <script type="module" src="js/main.js"></script>
   </head>
   <body>
     <a class="evitement" href="#contenu">
@@ -27,14 +26,14 @@
         Panier
         <span class="visuellement-cache">(0 article)</span>
       </a>
-      <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <button class="menu-bouton" type="button" aria-expanded="true" aria-controls="menu-principal">
         Menu
       </button>
       <form class="recherche" role="search" action="recherche.html" method="get">
         <label for="q">
           Rechercher un produit
         </label>
-        <input id="q" name="titre" type="search">
+        <input id="q" name="q" type="search">
         <button type="submit">
           Rechercher
         </button>
@@ -77,17 +76,11 @@
             </a>
           </li>
         </ul>
-      </nav>
-      <nav class="langues" aria-label="Choix de la langue">
-        <a href="?lang=fr" lang="fr" hreflang="fr" aria-current="true">
-          Français
-        </a>
-        <a href="?lang=en" lang="en" hreflang="en">
-          English
-        </a>
-        <a href="?lang=ar" lang="ar" hreflang="ar" dir="rtl">
-          العربية
-        </a>
+        <ul class="langues liste-reset" aria-label="Choisir une langue">
+          <li><a href="inscription.html" lang="fr" hreflang="fr" aria-current="true">Français</a></li>
+          <li><a href="en/inscription.html" lang="en" hreflang="en">English</a></li>
+          <li><a href="ar/inscription.html" lang="ar" hreflang="ar" dir="rtl">العربية</a></li>
+        </ul>
       </nav>
     </header>
     <main id="contenu" class="page">

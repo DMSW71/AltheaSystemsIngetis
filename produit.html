@@ -13,11 +13,10 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="main.js" defer>
-    </script>
     <title>
       Produit - Althéa Systems
     </title>
+      <script type="module" src="js/main.js"></script>
   </head>
   <body>
     <a class="evitement" href="#contenu">
@@ -31,14 +30,14 @@
         Panier
         <span class="visuellement-cache">(0 article)</span>
       </a>
-      <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <button class="menu-bouton" type="button" aria-expanded="true" aria-controls="menu-principal">
         Menu
       </button>
       <form class="recherche" role="search" action="recherche.html" method="get">
         <label for="q">
           Rechercher un produit
         </label>
-        <input id="q" name="titre" type="search">
+        <input id="q" name="q" type="search">
         <button type="submit">
           Rechercher
         </button>
@@ -81,17 +80,11 @@
             </a>
           </li>
         </ul>
-      </nav>
-      <nav class="langues" aria-label="Choix de la langue">
-        <a href="?lang=fr" lang="fr" hreflang="fr" aria-current="true">
-          Français
-        </a>
-        <a href="?lang=en" lang="en" hreflang="en">
-          English
-        </a>
-        <a href="?lang=ar" lang="ar" hreflang="ar" dir="rtl">
-          العربية
-        </a>
+        <ul class="langues liste-reset" aria-label="Choisir une langue">
+          <li><a href="produit.html" lang="fr" hreflang="fr" aria-current="true">Français</a></li>
+          <li><a href="en/produit.html" lang="en" hreflang="en">English</a></li>
+          <li><a href="ar/produit.html" lang="ar" hreflang="ar" dir="rtl">العربية</a></li>
+        </ul>
       </nav>
     </header>
     <main id="contenu" class="page">
@@ -114,7 +107,7 @@
           </li>
         </ol>
       </nav>
-      <article class="fiche">
+      <article class="fiche" data-id="tensiometre">
         <section class="fiche-images">
           <h1 id="nom-produit">
             Tensiomètre électronique de bras OMRON M3 Comfort
@@ -124,13 +117,13 @@
           </h2>
           <ul id="galerie-produit" class="defile galerie liste-reset" tabindex="0" aria-label="Photos du produit, à faire défiler">
             <li>
-              <img src="img/tensiometre.svg" srcset="img/tensiometre-400.svg 400w, img/tensiometre-800.svg 800w" sizes="(min-width:64rem) 50vw,100vw" alt="Tensiomètre avec brassard" width="600" height="450">
+              <img src="img/tensiometre.svg" srcset="img/tensiometre.svg 400w, img/tensiometre.svg 800w" sizes="(min-width: 64rem) 50vw, 100vw" alt="Tensiomètre avec brassard" width="600" height="450">
             </li>
             <li>
-              <img src="img/tensiometre-ecran.svg" srcset="img/tensiometre-ecran-400.svg 400w, img/tensiometre-ecran-800.svg 800w" sizes="(min-width:64rem) 50vw,100vw" alt="Écran du tensiomètre" width="600" height="450" loading="lazy">
+              <img src="img/tensiometre-ecran.svg" srcset="img/tensiometre-ecran.svg 400w, img/tensiometre-ecran.svg 800w" sizes="(min-width: 64rem) 50vw, 100vw" alt="Écran du tensiomètre" width="600" height="450" loading="lazy">
             </li>
             <li>
-              <img src="img/tensiometre-brassard.svg" srcset="img/tensiometre-brassard-400.svg 400w, img/tensiometre-brassard-800.svg 800w" sizes="(min-width:64rem) 50vw,100vw" alt="Brassard du tensiomètre" width="600" height="450" loading="lazy">
+              <img src="img/tensiometre-brassard.svg" srcset="img/tensiometre-brassard.svg 400w, img/tensiometre-brassard.svg 800w" sizes="(min-width: 64rem) 50vw, 100vw" alt="Brassard du tensiomètre" width="600" height="450" loading="lazy">
             </li>
           </ul>
         </section>
@@ -147,10 +140,11 @@
             <label for="quantite">
               Quantité
             </label>
-            <input id="quantite" name="quantite" type="number" min="1" max="5" value="1" disabled>
+            <input id="quantite" name="quantite" type="number" min="1" max="10" value="1" disabled>
             <button class="btn" type="submit" disabled>
               Indisponible
             </button>
+            <p class="message-achat" aria-live="polite"></p>
           </form>
         </section>
         <section class="fiche-description">
@@ -214,6 +208,9 @@
                     <th scope="col">
                       Référence
                     </th>
+                    <th scope="col">
+                      Fourni
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -230,6 +227,7 @@
                     <td>
                       22 cm
                     </td>
+                    <td>Non</td>
                   </tr>
                   <tr>
                     <th scope="row">
@@ -243,6 +241,9 @@
                     </td>
                     <td>
                       42 cm
+                    </td>
+                    <td>Oui
+                      <span class="visuellement-cache">, cette taille est fournie avec le tensiomètre.</span>
                     </td>
                   </tr>
                   <tr>
@@ -258,6 +259,7 @@
                     <td>
                       52 cm
                     </td>
+                    <td>Non</td>
                   </tr>
                 </tbody>
               </table>
@@ -265,109 +267,27 @@
           </section>
         </section>
       </article>
-      <section class="top-produits">
-        <h2>
-          Produits similaires
+      <section class="avis" aria-labelledby="titre-avis">
+        <h2 id="titre-avis">
+          Avis clients
         </h2>
+        <p id="etat-avis" aria-live="polite">
+          Chargement des avis…
+        </p>
+        <ul id="liste-avis" class="avis-liste liste-reset"></ul>
+      </section>
+      <section class="top-produits similaires" aria-labelledby="titre-similaires">
+        <h2 id="titre-similaires">Produits similaires</h2>
         <ul class="produits liste-reset">
-          <li>
-            <article class="produit">
-              <img src="img/chariot.svg" alt="Illustration : Chariot de soins 3 niveaux" width="400" height="300" loading="lazy">
-              <h3>
-                <a href="produit.html?produit=chariot">
-                  Chariot de soins 3 niveaux
-                </a>
-              </h3>
-              <p class="prix">
-                590 € HT
-              </p>
-              <p class="stock">
-                En stock
-              </p>
-            </article>
-          </li>
-          <li>
-            <article class="produit">
-              <img src="img/analyseur.svg" alt="Illustration : Analyseur hématologie 3-part" width="400" height="300" loading="lazy">
-              <h3>
-                <a href="produit.html?produit=analyseur">
-                  Analyseur hématologie 3-part
-                </a>
-              </h3>
-              <p class="prix">
-                4 990 € HT
-              </p>
-              <p class="stock">
-                En stock
-              </p>
-            </article>
-          </li>
-          <li>
-            <article class="produit">
-              <img src="img/microscope.svg" alt="Illustration : Microscope optique binoculaire" width="400" height="300" loading="lazy">
-              <h3>
-                <a href="produit.html?produit=microscope">
-                  Microscope optique binoculaire
-                </a>
-              </h3>
-              <p class="prix">
-                1 290 € HT
-              </p>
-              <p class="stock">
-                En stock
-              </p>
-            </article>
-          </li>
-          <li>
-            <article class="produit">
-              <img src="img/batterie-ecg.svg" alt="Illustration : Batterie ECG portable" width="400" height="300" loading="lazy">
-              <h3>
-                <a href="produit.html?produit=batterie-ecg">
-                  Batterie ECG portable
-                </a>
-              </h3>
-              <p class="prix">
-                89,90 €
-              </p>
-              <p class="stock">
-                En stock
-              </p>
-            </article>
-          </li>
-          <li>
-            <article class="produit">
-              <img src="img/batterie-moniteur.svg" alt="Illustration : Batterie moniteur compatible" width="400" height="300" loading="lazy">
-              <h3>
-                <a href="produit.html?produit=batterie-moniteur">
-                  Batterie moniteur compatible
-                </a>
-              </h3>
-              <p class="prix">
-                79,90 €
-              </p>
-              <p class="stock">
-                En stock
-              </p>
-            </article>
-          </li>
-          <li>
-            <article class="produit">
-              <img src="img/cable-ecg.svg" alt="Illustration : Câble ECG 10 fils universel" width="400" height="300" loading="lazy">
-              <h3>
-                <a href="produit.html?produit=cable-ecg">
-                  Câble ECG 10 fils universel
-                </a>
-              </h3>
-              <p class="prix">
-                49 € HT
-              </p>
-              <p class="stock stock-rupture">
-                En rupture de stock
-              </p>
-            </article>
-          </li>
+          <li><article class="produit"><a href="produit.html?produit=analyseur"><img src="img/analyseur.svg" alt="" width="400" height="300"><h3>Analyseur hématologie 3-part</h3></a><p class="prix">4 990 € HT</p><p>En stock</p></article></li>
+          <li><article class="produit"><a href="produit.html?produit=microscope"><img src="img/microscope.svg" alt="" width="400" height="300"><h3>Microscope optique binoculaire</h3></a><p class="prix">1 290 € HT</p><p>En stock</p></article></li>
+          <li><article class="produit"><a href="produit.html?produit=chariot"><img src="img/chariot.svg" alt="" width="400" height="300"><h3>Chariot de soins 3 niveaux</h3></a><p class="prix">590 € HT</p><p>En stock</p></article></li>
+          <li><article class="produit"><a href="produit.html?produit=batterie-ecg"><img src="img/batterie-ecg.svg" alt="" width="400" height="300"><h3>Batterie ECG portable</h3></a><p class="prix">89,90 € HT</p><p>En stock</p></article></li>
+          <li><article class="produit"><a href="produit.html?produit=batterie-moniteur"><img src="img/batterie-moniteur.svg" alt="" width="400" height="300"><h3>Batterie moniteur compatible</h3></a><p class="prix">79,90 €</p><p>En stock</p></article></li>
+          <li><article class="produit"><a href="produit.html?produit=cable-ecg"><img src="img/cable-ecg.svg" alt="" width="400" height="300"><h3>Câble ECG 10 fils universel</h3></a><p class="prix">49 € HT</p><p class="stock stock-rupture">En rupture de stock</p></article></li>
         </ul>
       </section>
+
     </main>
     <footer class="pied page">
       <nav aria-label="Informations légales">

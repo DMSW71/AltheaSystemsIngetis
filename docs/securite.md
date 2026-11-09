@@ -7,3 +7,7 @@
 | Formulaires | POST, validations HTML et aides associées. | Aucun serveur ne reçoit ni ne vérifie les données. |
 | Liens externes | HTTPS, `noopener noreferrer`, nouvel onglet annoncé. | Vérifier les domaines avant publication. |
 | Dépôt | `.gitignore` exclut secrets et fichiers locaux. | Ne pas ajouter de secret au projet. |
+
+## Test JavaScript (jour 3)
+
+Les noms de produits et les avis sont affichés avec `textContent`. Un nom et un avis contenant une balise HTML servent de test : ils doivent rester du texte. Les avis dont la note n’est pas comprise entre 1 et 5 sont ignorés.

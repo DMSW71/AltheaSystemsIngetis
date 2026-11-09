@@ -9,11 +9,10 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="main.js" defer>
-    </script>
     <title>
       Panier - Althéa Systems
     </title>
+      <script type="module" src="js/main.js"></script>
   </head>
   <body>
     <a class="evitement" href="#contenu">
@@ -27,14 +26,14 @@
         Panier
         <span class="visuellement-cache">(0 article)</span>
       </a>
-      <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <button class="menu-bouton" type="button" aria-expanded="true" aria-controls="menu-principal">
         Menu
       </button>
       <form class="recherche" role="search" action="recherche.html" method="get">
         <label for="q">
           Rechercher un produit
         </label>
-        <input id="q" name="titre" type="search">
+        <input id="q" name="q" type="search">
         <button type="submit">
           Rechercher
         </button>
@@ -77,31 +76,20 @@
             </a>
           </li>
         </ul>
-      </nav>
-      <nav class="langues" aria-label="Choix de la langue">
-        <a href="?lang=fr" lang="fr" hreflang="fr" aria-current="true">
-          Français
-        </a>
-        <a href="?lang=en" lang="en" hreflang="en">
-          English
-        </a>
-        <a href="?lang=ar" lang="ar" hreflang="ar" dir="rtl">
-          العربية
-        </a>
+        <ul class="langues liste-reset" aria-label="Choisir une langue">
+          <li><a href="panier.html" lang="fr" hreflang="fr" aria-current="true">Français</a></li>
+          <li><a href="en/panier.html" lang="en" hreflang="en">English</a></li>
+          <li><a href="ar/panier.html" lang="ar" hreflang="ar" dir="rtl">العربية</a></li>
+        </ul>
       </nav>
     </header>
     <main id="contenu" class="page">
-      <h1>
-        Panier
-      </h1>
-      <p>
-        Le panier est une maquette. Les commandes ne sont pas activées dans cette version du site.
-      </p>
-      <p>
-        <a href="categorie.html">
-          Revenir au catalogue
-        </a>
-      </p>
+      <h1 id="titre-panier" tabindex="-1">Mon panier</h1>
+      <p id="panier-vide">Votre panier est vide.</p>
+      <ul id="lignes-panier" class="liste-reset"></ul>
+      <p aria-live="polite">Total : <strong id="total-panier">0,00 €</strong></p>
+      <p id="message-panier" aria-live="polite"></p>
+      <p><a href="catalogue.html">Revenir au catalogue</a></p>
     </main>
     <footer class="pied page">
       <nav aria-label="Informations légales">
